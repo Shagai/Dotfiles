@@ -61,9 +61,9 @@ vim() {
     echo "      sh ~/.vim/vim_vundle.sh"
     mkdir -p ~/.vim
     cp -r ./vim/* ~/.vim/
-    mv ~/.vim/vimrc ~/.vimrc
-    mv ~/.vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-    sh ~/.vim/vim_bundle.sh
+    cp ./vim/vimrc ~/.vimrc
+    cp ./vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+    sh ./vim/vim_vundle.sh
 }
 
 case "$1" in
