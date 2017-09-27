@@ -29,6 +29,9 @@ function colour_my_prompt {
 
 colour_my_prompt
 
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 alias ls='ls --color=auto'
 source /home/shagai/.bazel/bin/bazel-complete.bash
