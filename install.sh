@@ -49,7 +49,9 @@ termite() {
 tmux() {
     echo " + Installing tmux configuration"
     echo "      cp ./tmux/tmux.conf ~/.tmux.conf"
+    echo "	cp ./tmux/.bash_profile ~/.bash_profile"
     cp ./tmux/tmux.conf ~/.tmux.conf
+    cp ./tmux/.bash_profile ~/.bash_profile
 }
 
 vim() {
