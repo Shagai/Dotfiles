@@ -46,6 +46,7 @@ export PATH="$CUDA_HOME/bin:$PATH"
 export OPENAI_GYM_API_KEY=sk_4WYhUBanSJ1HiPocUAOWw
 
 export VISUAL="vim"
+# export TERM=screen-256color
 
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
