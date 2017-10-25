@@ -14,8 +14,12 @@ vman() {
 
 
 function colour_my_prompt {
+    local BRed='\[\e[1;31m\]'
+    local Red='\[\e[0;31m\]'
     local Red='\[\e[0;31m\]'
     local BBlue='\[\e[1;34m\]'
+    local BBlue='\[\e[1;34m\]'
+    local Green='\[\e[0;32m\]'
     local BGreen='\[\e[1;32m\]'
     local NC='\[\e[m\]'
     local __host="${Red}\h"
