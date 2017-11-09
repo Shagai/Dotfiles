@@ -21,6 +21,7 @@ function colour_my_prompt {
     local BBlue='\[\e[1;34m\]'
     local Green='\[\e[0;32m\]'
     local BGreen='\[\e[1;32m\]'
+    local BYellow='\[\e[1;49;93m\]'
     local NC='\[\e[m\]'
     local __host="${Red}\h"
     local __separator="::"
