@@ -56,11 +56,13 @@ tmux() {
 
 vim() {
     echo " + Installing and preparing vim configuration"
+    echo "      sh ./vim/vinInstall.sh"
     echo "      mkdir -p ~/.vim"
     echo "      cp -r ./vim/* ~/.vim/"
-    echo "      mv ~/.vim/vimrc ~/.vimrc"
-    echo "      mv ~/.vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py"
-    echo "      sh ~/.vim/vim_vundle.sh"
+    echo "      mv ./vim/vimrc ~/.vimrc"
+    echo "      mv ./vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py"
+    echo "      sh ./vim/vim_vundle.sh"
+    sh ./vim/vimInstall.sh
     mkdir -p ~/.vim
     cp -r ./vim/* ~/.vim/
     cp ./vim/vimrc ~/.vimrc
