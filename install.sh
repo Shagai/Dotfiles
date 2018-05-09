@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # Script for installing all the config files in an easy way so I don't have
 # to manually move/copy everything
@@ -28,8 +28,10 @@ Bash() {
     echo " + Installing bashrc"
     echo "      cp $LOCAL/bash/bashrc ~/.bashrc"
     echo " 	cp $LOCAL/bash/dir_colors ~/.dir_colors"
+    echo "	sh $LOCAL/bash/autocomplete.sh"
     cp $LOCAL/bash/bashrc ~/.bashrc
     cp $LOCAL/bash/dir_colors ~/.dir_colors
+    sh $LOCAL/bash/autocomplete.sh
 }
 
 Git() {
