@@ -51,7 +51,7 @@ export PATH="$CUDA_HOME/bin:$PATH"
 #export OPENAI_GYM_API_KEY=sk_4WYhUBanSJ1HiPocUAOWw
 
 export VISUAL="vim"
-# export TERM=screen-256color
+# export TERM=screen-256color # Use this instead of vim when you connect via ssh
 
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
