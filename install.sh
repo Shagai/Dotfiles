@@ -1,3 +1,5 @@
+#! /bin/sh
+
 # Script for installing all the config files in an easy way so I don't have
 # to manually move/copy everything
 #
@@ -9,7 +11,9 @@
 #  - vimrc and all my .vim
 #  - oh-my-zsh is not installed yet and my modifications to it
 
-usage() {
+LOCAL=`dirname $0`
+
+Usage() {
     echo "Usage: sh install.sh <option>"
     echo "Where option is one of the following:"
     echo "  - all: Install everything"
@@ -20,7 +24,7 @@ usage() {
     echo "  - vim: vimrc and all my .vim. Also runs vim_bundle.sh"
 }
 
-bash() {
+Bash() {
     echo " + Installing bashrc"
     echo "      cp ./bash/bashrc ~/.bashrc"
     echo " 	cp ./bash/dir_colors ~/.dir_colors"
@@ -28,7 +32,7 @@ bash() {
     cp ./bash/dir_colors ~/.dir_colors
 }
 
-git() {
+Git() {
     echo " + Installing git configuration"
     echo "      mkdir -p ~/.config/git"
     echo "      cp ./git/gitconfig ~/.gitconfig"
@@ -38,7 +42,7 @@ git() {
     cp ./git/gitignore ~/.config/git/gitignore
 }
 
-termite() {
+Termite() {
     echo " + Installing termite configuration"
     echo "      mkdir -p ~/.config/termite"
     echo "      cp ./termite/config ~/.config/termite/"
@@ -46,7 +50,7 @@ termite() {
     cp ./termite/config ~/.config/termite/
 }
 
-tmux() {
+Tmux() {
     echo " + Installing tmux configuration"
     echo "      cp ./tmux/tmux.conf ~/.tmux.conf"
     echo "	cp ./tmux/.bash_profile ~/.bash_profile"
@@ -54,35 +58,43 @@ tmux() {
     cp ./tmux/.bash_profile ~/.bash_profile
 }
 
-vim() {
+Vim() {
     echo " + Installing and preparing vim configuration"
-    echo "      sh ./vim/vinInstall.sh"
+    echo "	sudo apt-get install cmake python-dev python3-dev"
+    echo "      sh $LOCAL/vim/vinInstall.sh"
     echo "      mkdir -p ~/.vim"
-    echo "      cp -r ./vim/* ~/.vim/"
-    echo "      mv ./vim/vimrc ~/.vimrc"
-    echo "      mv ./vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py"
-    echo "      sh ./vim/vim_vundle.sh"
-    sh ./vim/vimInstall.sh
+    echo "      cp -r $LOCAL/vim/* ~/.vim/"
+    echo "      cp $LOCAL/vim/vimrc ~/.vimrc"
+    echo "      cp $LOCAL/vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py"
+    echo "      sh $LOCAL/vim/vim_vundle.sh"
+    echo "	vim +PluginInstall +qall"
+    echo "	cd ~/.vim.bundle/YouCompleteMe"
+    echo "	./install.py --all"
+    sudo apt-get install cmake python-dev python3-dev
+    sh $LOCAL/vim/vimInstall.sh
     mkdir -p ~/.vim
-    cp -r ./vim/* ~/.vim/
-    cp ./vim/vimrc ~/.vimrc
-    cp ./vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-    sh ./vim/vim_vundle.sh
+    cp -r $LOCAL/vim/* ~/.vim/
+    cp $LOCAL/vim/vimrc ~/.vimrc
+    cp $LOCAL/vim/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+    sh $LOCAL/vim/vim_vundle.sh
+    vim +PluginInstall +qall
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.py --all
 }
 
 case "$1" in
     "all")
-        bash
-        git
-        termite
-        tmux
-        vim
+        Bash
+        Git
+        Termite
+        Tmux
+        Vim
         ;;
 
-    "bash")     bash     ;;
-    "git")      git  ;;
-    "termite")  termite  ;;
-    "tmux")     tmux     ;;
-    "vim")      vim      ;;
-    *)          usage    ;;
+    "bash")     Bash     ;;
+    "git")      Git  ;;
+    "termite")  Termite  ;;
+    "tmux")     Tmux     ;;
+    "vim")      Vim      ;;
+    *)          Usage    ;;
 esac
