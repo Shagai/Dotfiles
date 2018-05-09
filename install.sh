@@ -26,36 +26,36 @@ Usage() {
 
 Bash() {
     echo " + Installing bashrc"
-    echo "      cp ./bash/bashrc ~/.bashrc"
-    echo " 	cp ./bash/dir_colors ~/.dir_colors"
-    cp ./bash/bashrc ~/.bashrc
-    cp ./bash/dir_colors ~/.dir_colors
+    echo "      cp $LOCAL/bash/bashrc ~/.bashrc"
+    echo " 	cp $LOCAL/bash/dir_colors ~/.dir_colors"
+    cp $LOCAL/bash/bashrc ~/.bashrc
+    cp $LOCAL/bash/dir_colors ~/.dir_colors
 }
 
 Git() {
     echo " + Installing git configuration"
     echo "      mkdir -p ~/.config/git"
-    echo "      cp ./git/gitconfig ~/.gitconfig"
-    echo "      cp ./git/gitignore ~/.config/git/gitignore"
+    echo "      cp $LOCAL/git/gitconfig ~/.gitconfig"
+    echo "      cp $LOCAL/git/gitignore ~/.config/git/gitignore"
     mkdir -p ~/.config/git
-    cp ./git/gitconfig ~/.gitconfig
-    cp ./git/gitignore ~/.config/git/gitignore
+    cp $LOCAL/git/gitconfig ~/.gitconfig
+    cp $LOCAL/git/gitignore ~/.config/git/gitignore
 }
 
 Termite() {
     echo " + Installing termite configuration"
     echo "      mkdir -p ~/.config/termite"
-    echo "      cp ./termite/config ~/.config/termite/"
+    echo "      cp $LOCAL/termite/config ~/.config/termite/"
     mkdir -p ~/.config/termite
-    cp ./termite/config ~/.config/termite/
+    cp $LOCAL/termite/config ~/.config/termite/
 }
 
 Tmux() {
     echo " + Installing tmux configuration"
-    echo "      cp ./tmux/tmux.conf ~/.tmux.conf"
-    echo "	cp ./tmux/.bash_profile ~/.bash_profile"
-    cp ./tmux/tmux.conf ~/.tmux.conf
-    cp ./tmux/.bash_profile ~/.bash_profile
+    echo "      cp $LOCAL/tmux/tmux.conf ~/.tmux.conf"
+    echo "	cp $LOCAL/tmux/.bash_profile ~/.bash_profile"
+    cp $LOCAL/tmux/tmux.conf ~/.tmux.conf
+    cp $LOCAL/tmux/.bash_profile ~/.bash_profile
 }
 
 Vim() {
