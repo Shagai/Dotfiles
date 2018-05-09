@@ -39,7 +39,7 @@ colour_my_prompt
     . /usr/share/bash-completion/bash_completion
 
 alias ls='ls --color=auto'
-source /home/shagai/.bazel/bin/bazel-complete.bash
+#source /home/shagai/.bazel/bin/bazel-complete.bash
 
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/bin"
@@ -48,7 +48,7 @@ export CUDA_HOME=/opt/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
 
-export OPENAI_GYM_API_KEY=sk_4WYhUBanSJ1HiPocUAOWw
+#export OPENAI_GYM_API_KEY=sk_4WYhUBanSJ1HiPocUAOWw
 
 export VISUAL="vim"
 # export TERM=screen-256color
