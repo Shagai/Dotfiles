@@ -48,18 +48,24 @@ Git() {
 
 Termite() {
     echo " + Installing termite configuration"
+    echo "	sh $LOCAL/termite/termiteInstall.sh"
     echo "      mkdir -p ~/.config/termite"
     echo "      cp $LOCAL/termite/config ~/.config/termite/"
+    sh $LOCAL/termite/termiteInstall.sh
     mkdir -p ~/.config/termite
     cp $LOCAL/termite/config ~/.config/termite/
 }
 
 Tmux() {
     echo " + Installing tmux configuration"
+    echo "	sh $LOCAL/tmux/tmuxInstall.sh"
     echo "      cp $LOCAL/tmux/tmux.conf ~/.tmux.conf"
     echo "	cp $LOCAL/tmux/.bash_profile ~/.bash_profile"
+    echo "	sh $LOCAL/tmux/tmuxCompletion.sh"
+    sh $LOCAL/tmux/tmuxInstall.sh
     cp $LOCAL/tmux/tmux.conf ~/.tmux.conf
     cp $LOCAL/tmux/.bash_profile ~/.bash_profile
+    sh $LOCAL/tmux/tmuxCompletion.sh
 }
 
 Vim() {
