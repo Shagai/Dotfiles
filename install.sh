@@ -36,9 +36,11 @@ Bash() {
 
 Git() {
     echo " + Installing git configuration"
+    echo "	sudo apt-get install git"
     echo "      mkdir -p ~/.config/git"
     echo "      cp $LOCAL/git/gitconfig ~/.gitconfig"
     echo "      cp $LOCAL/git/gitignore ~/.config/git/gitignore"
+    sudo apt-get install git
     mkdir -p ~/.config/git
     cp $LOCAL/git/gitconfig ~/.gitconfig
     cp $LOCAL/git/gitignore ~/.config/git/gitignore
