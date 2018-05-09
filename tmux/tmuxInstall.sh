@@ -3,8 +3,9 @@
 mkdir ~/Repos
 cd ~/Repos
 git clone https://github.com/tmux/tmux.git
-cd bash-completion
-git checkout v2.7
+sudo apt-get install libevent1-dev
+cd tmux
+git checkout 2.7
 make distclean
 sh autogen.sh
 ./configure
