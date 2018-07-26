@@ -89,7 +89,7 @@ Vim() {
     sh $LOCAL/vim/vim_vundle.sh
     vim +PluginInstall +qall
     cd ~/.vim/bundle/YouCompleteMe
-    ./install.py --all
+    ./install.py --clang-completer
 }
 
 case "$1" in

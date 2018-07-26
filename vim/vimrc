@@ -223,3 +223,8 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
+
+" Show existing tab with 4 spaces width
+set tabstop=4
+" When identing with '>, use 4 spaces width
+set shiftwidth=4
