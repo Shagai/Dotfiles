@@ -3,7 +3,7 @@
 mkdir ~/Repos
 cd ~/Repos
 git clone https://github.com/tmux/tmux.git
-sudo apt-get install libevent1-dev
+sudo apt-get install libevent1-dev libevent-dev
 cd tmux
 git checkout 2.7
 make distclean
