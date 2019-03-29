@@ -4,7 +4,7 @@ mkdir ~/Repos
 cd ~/Repos
 git clone https://github.com/scop/bash-completion.git
 cd bash-completion
-git checkout v2.8
+git checkout 2.8
 make distclean
 autoreconf -i  # if not installing from prepared release tarball
 ./configure
