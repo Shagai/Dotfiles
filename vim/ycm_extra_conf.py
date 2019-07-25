@@ -52,6 +52,7 @@ flags = [
 # For a C project, you would set this to something like 'c99' instead of
 # 'c++11'.
 '-std=c++11',
+'-std=c++14',
 # ...and the same thing goes for the magic -x option which specifies the
 # language that the files to be compiled are written in. This is mostly
 # relevant for c++ headers.
@@ -83,12 +84,14 @@ flags = [
 '-I',
 '/usr/lib',
 '-I/usr/include',
-'-I',
-'/home/shagai/catkin_ws/src/moemoeai/moemoeai_ros',
-'-I',
-'/home/shagai/catkin_ws/src/moemoeai/moemoeai_ros/include',
+'-I/usr/local/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Utility/Logger/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Sensors/RGBDCamera/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Utility/VisionUtility/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Vision/ObjectDetection/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Sensors/Camera/include',
+'-I/home/jcamarer/Projects/CERNRoboticFramework/modules/Applications/TIMAlignment/include'
 ]
-
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
